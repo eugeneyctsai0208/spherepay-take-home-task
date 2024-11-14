@@ -86,3 +86,7 @@ Each currency has a predefined settlement time, simulating the delay for funds t
 - **JPY**: 3 seconds
 - **GBP**: 2 seconds
 - **AUD**: 3 seconds
+
+## Submission
+
+Please submit your work in a GitHub repository. Either set the repository to public, or, if you prefer to keep it private, add the following users as collaborators: nelsontky, SphereLaboratories, santosmarco, audreyleow and aur42.
