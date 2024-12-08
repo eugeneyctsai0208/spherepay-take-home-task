@@ -1,5 +1,12 @@
 # Inventory Management system
 
+## Submission Notes
+Ideally this would be done with a database, but I decided to go with a lightweighted version storing everything in memory to reduce development time. I'd be happy to discuss database schema, database atomicity and concurrency operations, and fail safe measures during an interview or followup, but the general idea would be having a rate_history table and an exchange_order table.
+
+Outside of the two requested endpoints, I've added 3 other endpoints to help debugging, with the path `internal` in the URL.
+
+Rebalancing is done on a simple percetage based redistribution. This allocates all inflows proportionally to outflows based on percentages of outflows, and each inflow is distributed across all outflows until inflow is fully depleted. All calculation is based on USD. For example, say we have USD +600, JPY +500, GBP -200, AUD -300 before the rebalancing, then 40% of the inflow (the excess USD) will go to GBP, and 60% will go to AUD, regardless of whether there is a net inflow or outflow. This ensures that high demand currencies are replenished proportional to their demand, and the distribution is based on a greedy approach for simplicity.
+
 ## Overview
 
 Your task is to build a backend service that simulates an inventory management system for a company providing cross-border liquidity services. The company operates liquidity pools in multiple currencies and manages currency transfers for users sending funds between different currencies.

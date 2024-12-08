@@ -1,0 +1,22 @@
+app:
+  debug: true
+  host: "127.0.0.1"
+  port: 5000
+
+liquidity_pool:
+  fees:
+    margin: 0.01
+  initial_balances:
+    USD: 1000000.0
+    EUR: 921568.0
+    JPY: 109890110.0
+    GBP: 750000.0
+    AUD: 1349528.0
+  fx_settlement_times:
+    USD : 3
+    EUR : 2
+    JPY : 3
+    GBP : 2
+    AUD : 3
+  rebalance:
+    interval: 60
