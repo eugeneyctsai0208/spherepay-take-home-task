@@ -1,6 +1,29 @@
 # Inventory Management system
 
 ## Submission Notes
+Submission is done on a basic flask app in python. Dependencies are managed in a virtual environment. Here are the steps to start:
+
+Create a virtual environment:
+```
+python3 -m venv venv
+source venv/bin/activate  // macOS or Linux, windows it'll be .\venv\Scripts\active
+```
+
+Install dependencies
+```
+pip install -r requirements.txt
+```
+
+Then run the application:
+```
+python app.py
+```
+
+When you're done run:
+```
+deactivate
+```
+
 Ideally this would be done with a database, but I decided to go with a lightweighted version storing everything in memory to reduce development time. I'd be happy to discuss database schema, database atomicity and concurrency operations, and fail safe measures during an interview or followup, but the general idea would be having a rate_history table and an exchange_order table.
 
 Outside of the two requested endpoints, I've added 3 other endpoints to help debugging, with the path `internal` in the URL.
